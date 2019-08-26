@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mad Libs</title>
+<style>
+h{
+	color: pink;
+	text-shadow: 3px 2px purple;
+	font-size: 30px;
+}
+</style>
+</head>
+<body>
+	<h>Cookie Recipe</h>
+	<br/>
+
+	<img src="piggy.jpg" alt="piggy">
+	<br/>
+
+	<p>Step 1: Preheat __(NOUN)__ to __(NUMBER)__ degrees(C)</p>
+	<p>Step 2: In a __(ADJECTIVE)__ __(NOUN)__, mix together the butter, __(PLURAL NOUN)__, eggs and __(PLURAL NOUN)__ until __(ADJECTIVE)__.</p>
+	<p>Step 3: Bake __(NUMBER)__ to __(NUMBER)__ minutes in the __(NOUN)__, or until __(ADJECTIVE)__.</p>
+
+	<br/>
+
+	<p>noun
+	<input type="text" id="myText" value=""></p>
+	<p>number
+	<input type="text" id="myText2" value=""></p>
+	<p>adjective
+	<input type="text" id="myText3" value=""></p>
+	<p>noun
+	<input type="text" id="myText4" value=""></p>
+	<p>plural noun
+	<input type="text" id="myText5" value=""></p>
+	<p>plural noun
+	<input type="text" id="myText6" value=""></p>
+	<p>adjective
+	<input type="text" id="myText7" value=""></p>
+	<p>number
+	<input type="text" id="myText8" value=""></p>
+	<p>number
+	<input type="text" id="myText9" value=""></p>
+	<p>noun
+	<input type="text" id="myText10" value=""></p>
+	<p>adjective
+	<input type="text" id="myText11" value=""></p>
+	<button onclick="myFunction()">Enter</button>
+
+
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+
+	<script type="text/javascript">
+
+		function myFunction(){
+			var a = document.getElementById("myText").value;
+			var b = document.getElementById("myText2").value;
+			var c = document.getElementById("myText3").value;
+			var d = document.getElementById("myText4").value;
+			var e = document.getElementById("myText5").value;
+			var f = document.getElementById("myText6").value;
+			var g = document.getElementById("myText7").value;
+			var h = document.getElementById("myText8").value;
+			var i = document.getElementById("myText9").value;
+			var j = document.getElementById("myText10").value;
+			var k = document.getElementById("myText11").value;
+			var step1 = "Step 1: Preheat " + a + " to " + b + " degrees celcius";
+			var step2= "Step 2: In a " + c + " " + d + ", mix together the butter, " + e +", eggs and " + f + " until " + g;
+			var step3="Step 3: Bake " + h + " to " + i + " minutes in the " + j + ", or until " + k;
+			document.getElementById("demo1").innerHTML = step1;
+			document.getElementById("demo2").innerHTML = step2;
+			document.getElementById("demo3").innerHTML = step3;
+
+			var msg = new SpeechSynthesisUtterance(step1);
+			var msg2 = new SpeechSynthesisUtterance(step2);
+			var msg3 = new SpeechSynthesisUtterance(step3);
+			window.speechSynthesis.speak(msg);
+			window.speechSynthesis.speak(msg2);
+			window.speechSynthesis.speak(msg3);
+
+			a = document.getElementById("myText").value="";
+			b = document.getElementById("myText2").value="";
+			c = document.getElementById("myText3").value="";
+			d = document.getElementById("myText4").value="";
+			e = document.getElementById("myText5").value="";
+			f = document.getElementById("myText6").value="";
+			g = document.getElementById("myText7").value="";
+			h = document.getElementById("myText8").value="";
+			i = document.getElementById("myText9").value="";
+			j = document.getElementById("myText10").value="";
+			k = document.getElementById("myText11").value="";
+		}
+
+	</script>
+
+
+</body>
+</html>
